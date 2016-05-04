@@ -1,0 +1,11 @@
+div class='container'
+
+  h1 Cities
+  
+  ul
+    - @cities.each do |city|
+	  li #{city}
+	  
+  h3 Solution:
+  
+  p #{@solution}

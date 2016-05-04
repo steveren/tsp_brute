@@ -1,0 +1,13 @@
+div class='container'
+
+  h1 US Capitals
+
+  = form_tag(welcome_plot_path, method: "post") do
+    - @capitals.each_with_index do |capital, i|
+      div class='checkbox'
+	    - box_name = "city#{i}"
+	    = check_box_tag(box_name, capital.city) 
+        | #{capital.city}, #{capital.state}
+	
+	div class='submit'
+	  = submit_tag("Plot")
